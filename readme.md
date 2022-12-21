@@ -20,3 +20,11 @@ fly ips allocate-v6 -a my-wp-app
 fly m run . -p 443:8080/tcp:tls -a my-wp-app
 ```
 
+## Administering Wordpress
+
+Since we had to bake in a sqlite database for now, there are a few things set up:
+
+1. Log into `/wp-admin` with username/password `admin`/`admin`
+    - Feel free to change this as desired
+2. The `wp-config.php` has a bit of extra code to make it work with ad-hoc `https://*.fly.dev` domains
+
