@@ -21,7 +21,7 @@ fly ips allocate-v6 -a my-wp-app
 # Start a Machine VM in the app
 # This builds the app based on the Dockerfile
 # in the current directory
-fly m run . -p 443:8080/tcp:tls -a my-wp-app
+fly m run . -p 443:80/tcp:tls -a my-wp-app
 ```
 
 ## Administering Wordpress
