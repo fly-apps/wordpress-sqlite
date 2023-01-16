@@ -17,7 +17,8 @@ So, Dockerizing a working Wordpress site with SQLite had some interesting parts 
 
 The Docker image that had SQLite is a Wordpress installation that already had the Perf Labs plugin installed into the `wp-content` directory.
 
-It also has an "empty" SQLite database which contains a username and password, and data about the Perf Labs plugin.
+It also has an "empty" SQLite database which contains a username and password, and data about the Perf Labs plugin. The username/password is noted in the `README.md` file and is unfortunately hard-coded, but people should change the username/password for themselves 
+after initial setup.
 
 * `wp-content/database/.ht.sqlite` is that "empty" database file
 * `wp-content/plugins/performance-lab` contains the perf lab plugin files
