@@ -1218,13 +1218,12 @@ class Akismet {
 		$akismet_ua = sprintf( 'WordPress/%s | Akismet/%s', $GLOBALS['wp_version'], constant( 'AKISMET_VERSION' ) );
 		$akismet_ua = apply_filters( 'akismet_ua', $akismet_ua );
 
-		$content_length = strlen( $request );
-
-		$api_key   = self::get_api_key();
 		$host      = self::API_HOST;
+		$api_key   = self::get_api_key();
 
-		if ( !empty( $api_key ) )
-			$host = $api_key.'.'.$host;
+		if ( $api_key ) {
+			$request = add_query_arg( 'api_key', $api_key, $request );
+		}
 
 		$http_host = $host;
 		// use a specific IP if provided

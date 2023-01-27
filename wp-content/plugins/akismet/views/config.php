@@ -62,7 +62,7 @@
 			<?php else : ?>
 			</div> <!-- close akismet-section-header -->
 			<div class="inside">
-				<p>Akismet is active and ready to stop spam. Your site's spam statistics will be displayed here.</p>
+				<p><?php esc_html_e( 'Akismet is active and ready to stop spam. Your site&#8217;s spam statistics will be displayed here.', 'akismet' ); ?></p>
 			</div>
 			<?php endif; ?>
 
